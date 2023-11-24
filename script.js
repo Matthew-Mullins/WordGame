@@ -46,7 +46,7 @@ function populate_txtUniqueWordsFound(localStorageList) {
     txtWordsFound.innerHTML = `Unique Words Found: ${uniqueWordsFound}!`
 }
 
-btn.addEventListener("click", async () => {
+async function submit() {
     //Get input word
     let inWord = inpWord.value;
     if (inWord === "") { return; }
@@ -70,7 +70,7 @@ btn.addEventListener("click", async () => {
             }
             return response.json();
         }
-         )
+        )
         .then((data) => {
             if (data === null) { return; }
             isValid = true;
@@ -92,10 +92,17 @@ btn.addEventListener("click", async () => {
 
     //Populate Word Count
     populate_txtUniqueWordsFound(localStorageList);
-    
+
     //Update localStorage
     update_localStorage(localStorageList);
 
     //Reset input field
     inpWord.value = "";
+}
+
+inpWord.addEventListener("keyup", async (e) => {
+    if (e.key === "Enter") {
+        submit();
+    }
 });
+btn.addEventListener("click", submit);
