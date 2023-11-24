@@ -14,10 +14,10 @@
 </head>
 
 <body>
-  <div class="container vh-100 d-flex flex-column">
+  <div class="container d-flex flex-column" style="height: 200vh;">
     <div class="row justify-content-center">
       <h1 class="row justify-content-center" style="text-align: center;">Welcome to Word Game!</h1>
-  
+
       <!-- Core Metrics -->
       <div class="row mb-2">
         <div class="card col-sm-12">
@@ -27,53 +27,55 @@
           </div>
         </div>
       </div>
-  
+
       <!-- Word Length Metrics -->
       <div class="row mb-2">
-        <div class="card col-sm-6 col-md-3">
+        <div class="card col-6 col-md-3">
           <div class="card-body">
             <h5 class="card-title" style="text-align: center;">Length 3-</h5>
             <h3 id="txtWordLength3" class="card-text" style="text-align: center;">999,999</h3>
           </div>
         </div>
-        <div class="card col-sm-6 col-md-3">
+        <div class="card col-6 col-md-3">
           <div class="card-body">
             <h5 class="card-title" style="text-align: center;">Length 4</h5>
             <h3 id="txtWordLength4" class="card-text" style="text-align: center;">999,999</h3>
           </div>
         </div>
-        <div class="card col-sm-6 col-md-3">
+        <div class="card col-6 col-md-3">
           <div class="card-body">
             <h5 class="card-title" style="text-align: center;">Length 5</h5>
             <h3 id="txtWordLength5" class="card-text" style="text-align: center;">999,999</h3>
           </div>
         </div>
-        <div class="card col-sm-6 col-md-3">
+        <div class="card col-6 col-md-3">
           <div class="card-body">
             <h5 class="card-title" style="text-align: center;">Length 6+</h5>
             <h3 id="txtWordLength6" class="card-text" style="text-align: center;">999,999</h3>
           </div>
         </div>
       </div>
-  
+
       <!-- Level Metrics -->
       <div class="row mb-2">
         <div class="card">
           <div class="card-body justify-content-center">
             <div class="card-text">
               <div class="row">
-                <h6 id="txtCurrentLevel" class="col-6 col-sm-3 order-0 order-sm-0" style="text-align: left;">Current Level</h6>
+                <h6 id="txtCurrentLevel" class="col-6 col-sm-3 order-0 order-sm-0" style="text-align: left;">Current
+                  Level</h6>
                 <div class="progress col-12 col-sm-6 order-2 order-sm-1">
-                  <div id="progLevelBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width: 50%;"
-                    role="progressbar">x%</div>
+                  <div id="progLevelBar" class="progress-bar progress-bar-striped progress-bar-animated"
+                    style="width: 50%;" role="progressbar">x%</div>
                 </div>
-                <h6 id="txtNextLevel" class="col-6 col-sm-3 order-1 order-sm-2" style="text-align: right;">Next Level</h6>
+                <h6 id="txtNextLevel" class="col-6 col-sm-3 order-1 order-sm-2" style="text-align: right;">Next Level
+                </h6>
               </div>
             </div>
           </div>
         </div>
       </div>
-  
+
       <!-- Word Submit -->
       <div class="row mb-2">
         <div class="input-group">
@@ -87,7 +89,7 @@
 
     <!-- Word Table -->
     <div class="row justify-content-center flex-grow-1 overflow-auto">
-      <div class="col-12" style="overflow: auto; display: inline-block;">
+      <div class="col-12">
         <table id="tblWords" class="table table-striped">
           <thead>
             <th class="col-6" scope="col" style="text-align: center;">Word</th>
